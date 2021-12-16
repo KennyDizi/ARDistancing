@@ -21,11 +21,11 @@ namespace ARDistancing.Views
 
         public void Invoke(float distancing, DistancingDirection direction)
         {
-            var data = new TreeMeasurement { Distancing = distancing, Direction = direction };
+            var data = new ObjectMeasurement { Distancing = distancing, Direction = direction };
             DistancingDetected?.Invoke(this, data);
         }
 
-        public event EventHandler<TreeMeasurement> DistancingDetected;
+        public event EventHandler<ObjectMeasurement> DistancingDetected;
     }
 
     public enum DistancingDirection
@@ -34,21 +34,11 @@ namespace ARDistancing.Views
         Vertical
     }
 
-    public enum MeasurementFlow
-    {
-        TreeBHD,
-        TreeHeight
-    }
-
-    public class TreeMeasurement
+    public class ObjectMeasurement
     {
         public float Distancing { get; set; }
 
         public DistancingDirection Direction { get; set; }
-
-        public MeasurementFlow Flow { get; set; }
-
-        public string Instruction { get; set; }
     }
 
     public static class ObjectExtensions
