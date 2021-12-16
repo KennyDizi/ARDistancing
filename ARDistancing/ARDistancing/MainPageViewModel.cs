@@ -5,11 +5,11 @@ using Xamarin.Forms;
 
 namespace ARDistancing
 {
-    internal class MainPageViewModel : BasePageViewModel
+    public class MainPageViewModel : BasePageViewModel
     {
         private readonly ObjectMeasurement _objectMeasurement;
 
-        internal MainPageViewModel()
+        public MainPageViewModel()
         {
             _objectMeasurement = new ObjectMeasurement();
 
