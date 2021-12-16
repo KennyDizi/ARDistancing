@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:BasePageView
+    x:Class="ARDistancing.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ardistancing="clr-namespace:ARDistancing"
+    xmlns:utils="clr-namespace:ARDistancing.Utils;assembly=ARDistancing"
+    xmlns:views="clr-namespace:ARDistancing.Views;assembly=ARDistancing"
+    x:DataType="ardistancing:MainPageViewModel"
+    x:TypeArguments="ardistancing:MainPageViewModel">
+
+    <AbsoluteLayout>
+        <views:ARView
+            x:Name="ARViewControl"
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All" />
+
+        <ImageButton
+            Margin="20"
+            AbsoluteLayout.LayoutBounds="0.5,1,AutoSize,AutoSize"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Aspect="AspectFit"
+            BackgroundColor="Transparent"
+            Command="{Binding OnSelectImageCommand}"
+            HeightRequest="70"
+            Source="Select_button.png"
+            VerticalOptions="Center"
+            WidthRequest="70">
+            <ImageButton.Triggers>
+                <EventTrigger Event="Clicked">
+                    <utils:ImgBtnClickedTriggerAction />
+                </EventTrigger>
+            </ImageButton.Triggers>
+        </ImageButton>
+    </AbsoluteLayout>
+
+</views:BasePageView>
