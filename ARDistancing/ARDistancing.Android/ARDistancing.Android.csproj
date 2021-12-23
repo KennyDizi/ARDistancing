@@ -64,6 +64,9 @@
     <PackageReference Include="ReactiveUI.XamForms">
       <Version>17.1.9</Version>
     </PackageReference>
+    <PackageReference Include="Sextant.XamForms">
+      <Version>2.12.4</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Android.SceneForm.Core">
       <Version>1.17.1</Version>
     </PackageReference>
