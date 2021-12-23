@@ -134,6 +134,9 @@
     <PackageReference Include="ReactiveUI.XamForms">
       <Version>17.1.9</Version>
     </PackageReference>
+    <PackageReference Include="Sextant.XamForms">
+      <Version>2.12.4</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
