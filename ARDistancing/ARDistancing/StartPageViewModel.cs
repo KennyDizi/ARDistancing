@@ -2,7 +2,7 @@
 using ARDistancing.Views;
 using ReactiveUI;
 using System;
-using Sextant;
+using Xamarin.Essentials;
 
 namespace ARDistancing
 {
@@ -12,9 +12,19 @@ namespace ARDistancing
         {
             GotoArPageCommand = ReactiveCommand.CreateFromTask(async () =>
             {
-                // todo ask camera permission
-                // todo navigate to AR Page, integration with Setant
-                _viewStackService?.PushPage<MainPageViewModel>(animate: true).Subscribe();
+                var permissionStatus = await Permissions.CheckStatusAsync<Permissions.Camera>();
+                if (permissionStatus == PermissionStatus.Granted)
+                {
+                    _viewStackService?.PushPage<MainPageViewModel>(animate: true).Subscribe();
+                }
+                else if (permissionStatus == PermissionStatus.Denied)
+                {
+                    var requestStatus = await Permissions.RequestAsync<Permissions.Camera>();
+                    if (requestStatus == PermissionStatus.Granted)
+                    {
+                        _viewStackService?.PushPage<MainPageViewModel>(animate: true).Subscribe();
+                    }
+                }
             });
         }
 

@@ -38,5 +38,7 @@
 	<string>1</string>
 	<key>UIRequiresFullScreen</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>The AR App or camera always have you!</string>
 </dict>
 </plist>
