@@ -17,7 +17,7 @@ namespace ARDistancing
                 {
                     _viewStackService?.PushPage<MainPageViewModel>(animate: true).Subscribe();
                 }
-                else if (permissionStatus == PermissionStatus.Denied)
+                else
                 {
                     var requestStatus = await Permissions.RequestAsync<Permissions.Camera>();
                     if (requestStatus == PermissionStatus.Granted)
