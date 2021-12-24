@@ -16,7 +16,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v12.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -109,7 +108,7 @@
   <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\ARDistancing\ARDistancing.csproj">
-      <Project>{12F0ECE1-14DB-4CAA-B2A6-1F750AE244D5}</Project>
+      <Project>{121819EA-2FDB-4684-9168-C2EB1B62B6E6}</Project>
       <Name>ARDistancing</Name>
     </ProjectReference>
   </ItemGroup>
