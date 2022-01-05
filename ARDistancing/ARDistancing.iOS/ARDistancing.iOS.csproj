@@ -132,18 +132,21 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="ReactiveUI.XamForms">
-      <Version>17.1.9</Version>
+      <Version>17.1.17</Version>
     </PackageReference>
     <PackageReference Include="Sextant.XamForms">
       <Version>2.12.4</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Splat">
+      <Version>14.1.17</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\ARDistancing\ARDistancing.csproj">
-      <Project>{12F0ECE1-14DB-4CAA-B2A6-1F750AE244D5}</Project>
+      <Project>{121819EA-2FDB-4684-9168-C2EB1B62B6E6}</Project>
       <Name>ARDistancing</Name>
     </ProjectReference>
   </ItemGroup>
